@@ -158,6 +158,13 @@
 \def\@date{\the\year}
 \def\degree#1{\def\@degree{#1}}
 \def\pdegrees#1{\def\@pdegrees{#1}}
+\newcommand{\committee}{}
+\newcommand*{\committeemember}[2][]{%
+  \g@addto@macro\committee{%
+    & #2 & #1 \\
+  }%
+}%
+
  
 \def\titlepage{
    \newpage
@@ -196,10 +203,9 @@
             \end{center}}
       \end{singlespace}
       \end{center}
-      \begin{tabular}{lr}
-      Defense Committee: & \\
-      &  V.N. Venkatakrishnan \\
-      &  Stefano Zanero
+      \begin{tabular}{lrl}
+        Defense Committee: & \\
+        \committee
       \end{tabular}
    \end{titlepage}}
 %    \end{macrocode}

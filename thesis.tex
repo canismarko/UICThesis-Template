@@ -10,14 +10,18 @@
 \usepackage{lipsum}\usepackage{lipsum}
 
 % Configuration
-	% Thesis title
-	\newcommand{\thesisTitle}{Thesis Title}
-	% Thesis author
-	\newcommand{\thesisAuthor}{Michele Spagnuolo}
-	% Author's previous degrees
-	\newcommand{\authorDegrees}{B.S., Politecnico di Milano, July 2011}
-	% Current degree (Thesis's degree)
-	\newcommand{\thesisDegree}{Master of Science in Computer Science}
+% Thesis title
+\title{Thesis Title}
+% Thesis author
+\author{Michele Spagnuolo}
+% Author's previous degrees
+\pdegrees{B.S., Politecnico di Milano, July 2011}
+% Current degree (Thesis's degree)
+\degree{Master of Science in Computer Science}
+% Committee members
+\committeemember[Chair and Advisor]{Jordi Cabana}
+\committeemember{V.N. Venkatakrishnan}
+\committeemember{Stefano Zanero}
 
 \usepackage[unicode,
 			pdftex,
@@ -41,10 +45,6 @@
 \input{acronyms/acronyms}
 
 \begin{document}
-	\title{\huge{\thesisTitle}}
-	\author{\thesisAuthor}
-	\pdegrees{\authorDegrees}
-	\degree{\thesisDegree}
 	\maketitle
 
 	\dedication
