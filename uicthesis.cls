@@ -76,6 +76,7 @@
 %
 % BEGIN OPTIONS
 %
+
 \newcommand\@ptsize{}
 \newcommand\@draftmark{}
 \DeclareOption{11pt}{\renewcommand\@ptsize{1}}
@@ -783,7 +784,7 @@
    \else
 \addtocontents{toc}{\protect\addvspace{\baselineskip}}
 \addcontentsline{toc}{chapter}%
-{\protect\xnumberline{\thechapter}\texorpdf\uppercase{#1}}
+{\protect\xnumberline{\thechapter} \texorpdfstring{\uppercase{#1}}{#1}}
    \fi
    \if@startedbodyyet         % Then do nothing
    \else
