@@ -183,8 +183,8 @@
             \large\transparentbold\@title
          \end{center}\vss}
       \vfill
-      \begin{center}
       \begin{singlespace}
+      \begin{center}
          BY
          \vskip\baselineskip
          \begin{tabular}{c}
@@ -201,13 +201,14 @@
                University of Illinois at Chicago, \@date
                \vskip 3\baselineskip
                Chicago, Illinois
+               \vskip 3\baselineskip
             \end{center}}
-      \end{singlespace}
-      \end{center}
       \begin{tabular}{lrl}
-        Defense Committee: & \\
+        & Defense Committee: & \vspace{1ex} \\
         \committee
       \end{tabular}
+      \end{center}
+      \end{singlespace}
    \end{titlepage}}
 %    \end{macrocode}
 %
@@ -1111,7 +1112,7 @@
 \def\roundbrackets{\def\bibob{(}\def\bibcb{)}}
 \def\squarebrackets{\def\bibob{[}\def\bibcb{]}}
 \def\nobrackets{\def\bibob{}\def\bibcb{}}
-\def\bibdatesep{,\ }
+% \def\bibdatesep{,\ }
 \def\bibmultisep{;}
 \def\egrp/{\egroup}
  
@@ -1136,7 +1137,7 @@
       { \def\protect##1{\string ##1\space}\immediate
         \write\@auxout{\string\bibcite{#2}{#1}}}\fi\ignorespaces}
  
-\def\bibliography#1{
+\def\citedliterature#1{
    \clearpage
    \typeout{CITED LITERATURE.}
    \addtocontents{toc}{\protect\addvspace{\baselineskip}}
@@ -1152,8 +1153,9 @@
        \pagestyle{bibliographycontinued}
    \@makeschapterhead{\section@mark}\par
    \begin{singlespace}
-   \if@filesw\immediate\write\@auxout{\string\bibdata{#1}}\fi
-   \@input{\jobname.bbl}
+     \printbibliography[heading=none]
+     %% \if@filesw\immediate\write\@auxout{\string\bibdata{#1}}\fi
+     %% \@input{\jobname.bbl}
    \end{singlespace}}
  
 \def\thebibliography#1{
